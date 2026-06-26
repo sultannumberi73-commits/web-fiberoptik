@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTTH Enterprise Network Planner</title>
+    <script src="FTTH%20sultan%20Network%20Planner_files/3.4.17"></script>
+    <link href="FTTH%20sultan%20Network%20Planner_files/css2.css" rel="stylesheet">
+    <link rel="stylesheet" href="FTTH%20sultan%20Network%20Planner_files/all.min.css">
+    <script src="FTTH%20sultan%20Network%20Planner_files/xlsx.full.min.js"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); }
+        .glow-indigo { box-shadow: 0 0 20px rgba(99, 102, 241, 0.2); }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.-bottom-10{bottom:-2.5rem}.-right-10{right:-2.5rem}.-top-3{top:-0.75rem}.left-1\/2{left:50%}.left-10{left:2.5rem}.left-3\.5{left:0.875rem}.right-10{right:2.5rem}.top-0{top:0px}.top-1\/2{top:50%}.top-3\.5{top:0.875rem}.z-0{z-index:0}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-2{margin-top:0.5rem;margin-bottom:0.5rem}.mb-1{margin-bottom:0.25rem}.mb-4{margin-bottom:1rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1{height:0.25rem}.min-h-screen{min-height:100vh}.w-full{width:100%}.max-w-\[1600px\]{max-width:1600px}.flex-1{flex:1 1 0%}.border-collapse{border-collapse:collapse}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-800 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(30 41 59 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-500\/60{border-color:rgb(245 158 11 / 0.6)}.border-cyan-500\/60{border-color:rgb(6 182 212 / 0.6)}.border-emerald-500\/60{border-color:rgb(16 185 129 / 0.6)}.border-emerald-900{--tw-border-opacity:1;border-color:rgb(6 78 59 / var(--tw-border-opacity, 1))}.border-indigo-500\/30{border-color:rgb(99 102 241 / 0.3)}.border-indigo-500\/40{border-color:rgb(99 102 241 / 0.4)}.border-indigo-900{--tw-border-opacity:1;border-color:rgb(49 46 129 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-700\/50{border-color:rgb(51 65 85 / 0.5)}.border-slate-700\/60{border-color:rgb(51 65 85 / 0.6)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.bg-\[\#080d1a\]{--tw-bg-opacity:1;background-color:rgb(8 13 26 / var(--tw-bg-opacity, 1))}.bg-\[\#0b1329\]{--tw-bg-opacity:1;background-color:rgb(11 19 41 / var(--tw-bg-opacity, 1))}.bg-\[\#131c35\]{--tw-bg-opacity:1;background-color:rgb(19 28 53 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-cyan-500{--tw-bg-opacity:1;background-color:rgb(6 182 212 / var(--tw-bg-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emerald-950\/50{background-color:rgb(2 44 34 / 0.5)}.bg-indigo-500\/20{background-color:rgb(99 102 241 / 0.2)}.bg-indigo-950\/50{background-color:rgb(30 27 75 / 0.5)}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/60{background-color:rgb(30 41 59 / 0.6)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/40{background-color:rgb(15 23 42 / 0.4)}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right, var(--tw-gradient-stops))}.from-emerald-500{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgb(16 185 129 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-indigo-400{--tw-gradient-from:#818cf8 var(--tw-gradient-from-position);--tw-gradient-to:rgb(129 140 248 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-indigo-500{--tw-gradient-from:#6366f1 var(--tw-gradient-from-position);--tw-gradient-to:rgb(99 102 241 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-900{--tw-gradient-from:#0f172a var(--tw-gradient-from-position);--tw-gradient-to:rgb(15 23 42 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-cyan-500{--tw-gradient-to:rgb(6 182 212 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #06b6d4 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-indigo-950{--tw-gradient-to:rgb(30 27 75 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #1e1b4b var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-amber-950\/60{--tw-gradient-to:rgb(69 26 3 / 0.6) var(--tw-gradient-to-position)}.to-cyan-400{--tw-gradient-to:#22d3ee var(--tw-gradient-to-position)}.to-cyan-950\/60{--tw-gradient-to:rgb(8 51 68 / 0.6) var(--tw-gradient-to-position)}.to-emerald-500{--tw-gradient-to:#10b981 var(--tw-gradient-to-position)}.to-emerald-950\/60{--tw-gradient-to:rgb(2 44 34 / 0.6) var(--tw-gradient-to-position)}.to-purple-500{--tw-gradient-to:#a855f7 var(--tw-gradient-to-position)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.to-teal-600{--tw-gradient-to:#0d9488 var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.p-2\.5{padding:0.625rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pl-9{padding-left:2.25rem}.pr-4{padding-right:1rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[180px\]{font-size:180px}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.text-indigo-500\/10{color:rgb(99 102 241 / 0.1)}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-40{opacity:0.4}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-emerald-500\/20{--tw-shadow-color:rgb(16 185 129 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.shadow-indigo-500\/30{--tw-shadow-color:rgb(99 102 241 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-800\/30:hover{background-color:rgb(30 41 59 / 0.3)}.hover\:opacity-90:hover{opacity:0.9}.focus\:border-amber-500:focus{--tw-border-opacity:1;border-color:rgb(245 158 11 / var(--tw-border-opacity, 1))}.focus\:border-cyan-500:focus{--tw-border-opacity:1;border-color:rgb(6 182 212 / var(--tw-border-opacity, 1))}.focus\:border-emerald-500:focus{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.focus\:border-indigo-500:focus{--tw-border-opacity:1;border-color:rgb(99 102 241 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 768px){.md\:block{display:block}.md\:w-32{width:8rem}.md\:w-44{width:11rem}.md\:w-auto{width:auto}.md\:flex-row{flex-direction:row}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width: 1280px){.xl\:col-span-4{grid-column:span 4 / span 4}.xl\:col-span-8{grid-column:span 8 / span 8}.xl\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}}</style></head>
+<body class="bg-[#0b1329] text-slate-200 antialiased min-h-screen">
+
+    <header class="glass border-b border-slate-800 px-8 py-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center gap-3">
+            <div class="bg-gradient-to-tr from-indigo-500 to-purple-500 p-2.5 rounded-xl shadow-lg shadow-indigo-500/30">
+                <i class="fa-solid fa-satellite-dish text-white text-xl animate-pulse"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+                    FTTH <span class="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent font-extrabold">SULTAN</span>
+                </h1>
+                <p class="text-xs text-slate-400">Sistem Perencanaan &amp; Manajemen Infrastruktur Fiber Optik</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <button onclick="hitungTotal()" class="bg-slate-800 hover:bg-slate-700 text-white px-5 py-2.5 rounded-xl font-semibold text-sm border border-slate-700 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-sync"></i> Sinkronisasi Jaringan
+            </button>
+            <button onclick="eksporKeExcel()" class="bg-gradient-to-r from-emerald-500 to-teal-600 hover:opacity-90 text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-xl shadow-emerald-500/20 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-file-excel"></i> Ekspor ke Excel
+            </button>
+        </div>
+    </header>
+
+    <main class="p-6 max-w-[1600px] mx-auto grid grid-cols-1 xl:grid-cols-12 gap-6">
+        
+        <div class="xl:col-span-4 space-y-6">
+            
+            <div class="glass border border-slate-800 rounded-2xl p-5 glow-indigo">
+                <div class="flex items-center gap-2 text-indigo-400 font-bold text-sm uppercase tracking-wider mb-4">
+                    <i class="fa-solid fa-circle-nodes"></i> Jalur Transmisi &amp; Tiang
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Lokasi Jalur Utama</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-location-crosshairs absolute left-3.5 top-3.5 text-slate-500 text-xs"></i>
+                            <input type="text" id="lokasi-tiang" value="Kawasan Boulevard Barat, Sektor 1" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl pl-9 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Volume Tiang</label>
+                            <input type="number" id="qty-tiang" value="24" oninput="hitungTotal()" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Harga Tiang / Batang</label>
+                            <input type="number" id="harga-tiang" value="1350000" oninput="hitungTotal()" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Panjang Kabel (Mtr)</label>
+                            <input type="number" id="qty-kabel" value="1850" oninput="hitungTotal()" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Harga Kabel / Mtr</label>
+                            <input type="number" id="harga-kabel" value="9000" oninput="hitungTotal()" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass border border-slate-800 rounded-2xl p-5 glow-indigo">
+                <div class="flex items-center gap-2 text-amber-400 font-bold text-sm uppercase tracking-wider mb-4">
+                    <i class="fa-solid fa-box-archive"></i> Distribusi Node (ODC &amp; ODP)
+                </div>
+                <div class="space-y-4">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Lokasi Pusat ODC</label>
+                            <input type="text" id="lokasi-odc" value="Node-Pusat Gg. IX" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Biaya ODC (Rp)</label>
+                            <input type="number" id="harga-odc" value="18500000" oninput="hitungTotal()" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-500">
+                        </div>
+                    </div>
+                    <hr class="border-slate-800">
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Sebaran Titik ODP</label>
+                        <input type="text" id="lokasi-odp" value="ODP-A01 s/d ODP-A06 (Pilar Jalan Utama)" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-cyan-500">
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Kapasitas ODP (Unit)</label>
+                            <input type="number" id="qty-odp" value="6" oninput="hitungTotal()" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-cyan-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Harga Per ODP</label>
+                            <input type="number" id="harga-odp" value="2100000" oninput="hitungTotal()" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-cyan-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass border border-slate-800 rounded-2xl p-5 glow-indigo">
+                <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm uppercase tracking-wider mb-4">
+                    <i class="fa-solid fa-house-chimney-window"></i> Last-Mile / Rumah Pelanggan
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Area Penetrasi Rumah</label>
+                        <input type="text" id="lokasi-rumah" value="Cluster Green Mansion &amp; Residence" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500">
+                    </div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Target Rumah (HP)</label>
+                            <input type="number" id="qty-rumah" value="48" oninput="hitungTotal()" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-emerald-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-1">Dropcore per Rumah</label>
+                            <input type="number" id="harga-rumah" value="400000" oninput="hitungTotal()" class="w-full bg-[#131c35] border border-slate-700/60 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-emerald-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="xl:col-span-8 space-y-6">
+            
+            <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 border border-indigo-500/40 rounded-3xl p-6 relative overflow-hidden flex flex-col md:flex-row justify-between items-center gap-4 shadow-2xl">
+                <div class="absolute -right-10 -bottom-10 text-indigo-500/10 text-[180px] pointer-events-none"><i class="fa-solid fa-network-wired"></i></div>
+                <div>
+                    <span class="bg-indigo-500/20 text-indigo-400 text-xs px-3 py-1 rounded-full font-bold uppercase tracking-widest border border-indigo-500/30">Total Anggaran Proyek</span>
+                    <h2 id="grand-total" class="text-4xl md:text-5xl font-extrabold text-white mt-3 tracking-tight">Rp 99.350.000</h2>
+                    <p class="text-xs text-slate-400 mt-2 flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-emerald-400"></i> Kalkulasi otomatis berdasarkan topologi aktif</p>
+                </div>
+                <div class="flex gap-4 w-full md:w-auto">
+                    <div class="bg-slate-800/60 border border-slate-700/50 p-4 rounded-xl flex-1 md:w-32 text-center">
+                        <div class="text-xs text-slate-400">Total Node</div>
+                        <div id="badge-node" class="text-xl font-bold text-cyan-400 mt-1">7 Node</div>
+                    </div>
+                    <div class="bg-slate-800/60 border border-slate-700/50 p-4 rounded-xl flex-1 md:w-32 text-center">
+                        <div class="text-xs text-slate-400">Homepass</div>
+                        <div id="badge-rumah" class="text-xl font-bold text-emerald-400 mt-1">48 Unit</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass border border-slate-800 rounded-2xl p-6">
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-diagram-project text-purple-400"></i> Live Network Topology Map
+                </h3>
+                
+                <div class="bg-[#080d1a] border border-slate-800 rounded-xl p-8 flex flex-col md:flex-row justify-between items-center gap-6 relative">
+                    <div class="absolute left-10 right-10 top-1/2 h-1 bg-gradient-to-r from-indigo-500 via-cyan-500 to-emerald-500 -translate-y-1/2 hidden md:block z-0 opacity-40"></div>
+                    
+                    <div class="bg-gradient-to-b from-slate-900 to-amber-950/60 border border-amber-500/60 p-4 rounded-2xl text-center w-full md:w-44 shadow-lg z-10 relative">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full uppercase">CORE ODC</div>
+                        <i class="fa-solid fa-box text-3xl text-amber-400 my-2"></i>
+                        <div id="topo-odc-loc" class="text-xs font-semibold text-white truncate">Node-Pusat Gg. IX</div>
+                        <div class="text-[10px] text-slate-400 mt-1">1 Unit Cabinet</div>
+                    </div>
+
+                    <div class="text-center z-10 bg-[#080d1a] px-3">
+                        <i class="fa-solid fa-arrow-right-long text-slate-600 hidden md:block text-xl"></i>
+                        <span id="topo-kabel" class="text-[11px] text-indigo-400 font-bold block bg-indigo-950/50 border border-indigo-900 px-2 py-1 rounded-md mt-1">1850 Mtr</span>
+                    </div>
+
+                    <div class="bg-gradient-to-b from-slate-900 to-cyan-950/60 border border-cyan-500/60 p-4 rounded-2xl text-center w-full md:w-44 shadow-lg z-10 relative">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-500 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full uppercase">DISTRIBUSI ODP</div>
+                        <i class="fa-solid fa-box-open text-3xl text-cyan-400 my-2"></i>
+                        <div id="topo-odp-qty" class="text-xs font-semibold text-white">6 Kotak ODP</div>
+                        <div class="text-[10px] text-slate-400 mt-1">Splitting Node</div>
+                    </div>
+
+                    <div class="text-center z-10 bg-[#080d1a] px-3">
+                        <i class="fa-solid fa-arrow-right-long text-slate-600 hidden md:block text-xl"></i>
+                        <span class="text-[11px] text-emerald-400 font-bold block bg-emerald-950/50 border border-emerald-900 px-2 py-1 rounded-md mt-1">Dropcore</span>
+                    </div>
+
+                    <div class="bg-gradient-to-b from-slate-900 to-emerald-950/60 border border-emerald-500/60 p-4 rounded-2xl text-center w-full md:w-44 shadow-lg z-10 relative">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded-full uppercase">LAST-MILE</div>
+                        <i class="fa-solid fa-house-laptop text-3xl text-emerald-400 my-2"></i>
+                        <div id="topo-rumah-qty" class="text-xs font-semibold text-white">48 Rumah Target</div>
+                        <div class="text-[10px] text-slate-400 mt-1">End User Homepass</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass border border-slate-800 rounded-2xl shadow-xl overflow-hidden">
+                <div class="px-6 py-4 bg-slate-900/40 border-b border-slate-800 flex justify-between items-center">
+                    <h3 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-file-invoice-dollar text-emerald-400"></i> Rincian Anggaran Biaya Proyek (RAB)
+                    </h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table id="tabel-rab" class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-900 text-[11px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-800">
+                                <th class="px-6 py-3.5">Deskripsi Perangkat / Material</th>
+                                <th class="px-6 py-3.5">Cakupan Wilayah / Titik</th>
+                                <th class="px-6 py-3.5 text-center">Volume</th>
+                                <th class="px-6 py-3.5 text-right">Harga Satuan</th>
+                                <th class="px-6 py-3.5 text-right">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800 text-xs text-slate-300">
+                            <tr class="hover:bg-slate-800/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white flex items-center gap-2">
+                                    Tiang Udara (Pole)
+                                </td>
+                                <td id="table-lokasi-tiang" class="px-6 py-4 text-slate-400">Kawasan Boulevard Barat, Sektor 1</td>
+                                <td id="table-qty-tiang" class="px-6 py-4 text-center text-white font-medium">24 Btg</td>
+                                <td id="table-harga-tiang" class="px-6 py-4 text-right">Rp 1.350.000</td>
+                                <td id="table-total-tiang" class="px-6 py-4 text-right font-bold text-indigo-400">Rp 32.400.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white flex items-center gap-2">
+                                    Kabel Fiber Optik (Aksial)
+                                </td>
+                                <td class="px-6 py-4 text-slate-400">Mengikuti Rute Jalur Tiang Utama</td>
+                                <td id="table-qty-kabel" class="px-6 py-4 text-center text-white font-medium">1850 Mtr</td>
+                                <td id="table-harga-kabel" class="px-6 py-4 text-right">Rp 9.000</td>
+                                <td id="table-total-kabel" class="px-6 py-4 text-right font-bold text-indigo-400">Rp 16.650.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white flex items-center gap-2">
+                                    Perangkat Cabinet ODC
+                                </td>
+                                <td id="table-lokasi-odc" class="px-6 py-4 text-slate-400">Node-Pusat Gg. IX</td>
+                                <td class="px-6 py-4 text-center text-white font-medium">1 Unit</td>
+                                <td id="table-harga-odc" class="px-6 py-4 text-right">Rp 18.500.000</td>
+                                <td id="table-total-odc" class="px-6 py-4 text-right font-bold text-amber-400">Rp 18.500.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white flex items-center gap-2">
+                                    Kotak Distribusi ODP
+                                </td>
+                                <td id="table-lokasi-odp" class="px-6 py-4 text-slate-400">ODP-A01 s/d ODP-A06 (Pilar Jalan Utama)</td>
+                                <td id="table-qty-odp" class="px-6 py-4 text-center text-white font-medium">6 Unit</td>
+                                <td id="table-harga-odp" class="px-6 py-4 text-right">Rp 2.100.000</td>
+                                <td id="table-total-odp" class="px-6 py-4 text-right font-bold text-cyan-400">Rp 12.600.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-800/30 transition">
+                                <td class="px-6 py-4 font-semibold text-white flex items-center gap-2">
+                                    Kabel Dropcore ke Rumah
+                                </td>
+                                <td id="table-lokasi-rumah" class="px-6 py-4 text-slate-400">Cluster Green Mansion &amp; Residence</td>
+                                <td id="table-qty-rumah" class="px-6 py-4 text-center text-white font-medium">48 Unit</td>
+                                <td id="table-harga-rumah" class="px-6 py-4 text-right">Rp 400.000</td>
+                                <td id="table-total-rumah" class="px-6 py-4 text-right font-bold text-emerald-400">Rp 19.200.000</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="bg-slate-900/60 font-bold border-t border-slate-700">
+                                <td class="px-6 py-4 text-right text-white" colspan="4">TOTAL ESTIMASI ANGGARAN:</td>
+                                <td id="table-grand-total" class="px-6 py-4 text-right text-xl text-emerald-400">Rp 99.350.000</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // Global variable untuk menyimpan total angka murni (tanpa format string Rp)
+        let nilaiGrandTotal = 0;
+
+        function formatRupiah(angka) {
+            return 'Rp ' + parseInt(angka).toLocaleString('id-ID');
+        }
+
+        function hitungTotal() {
+            // Pengambilan Data Form Input
+            const qtyTiang = document.getElementById('qty-tiang').value || 0;
+            const hargaTiang = document.getElementById('harga-tiang').value || 0;
+            const qtyKabel = document.getElementById('qty-kabel').value || 0;
+            const hargaKabel = document.getElementById('harga-kabel').value || 0;
+            const hargaOdc = document.getElementById('harga-odc').value || 0;
+            const qtyOdp = document.getElementById('qty-odp').value || 0;
+            const hargaOdp = document.getElementById('harga-odp').value || 0;
+            const qtyRumah = document.getElementById('qty-rumah').value || 0;
+            const hargaRumah = document.getElementById('harga-rumah').value || 0;
+
+            // Proses Hitung Subtotal Komponen
+            const totalTiang = qtyTiang * hargaTiang;
+            const totalKabel = qtyKabel * hargaKabel;
+            const totalOdc = parseInt(hargaOdc);
+            const totalOdp = qtyOdp * hargaOdp;
+            const totalRumah = qtyRumah * hargaRumah;
+
+            nilaiGrandTotal = totalTiang + totalKabel + totalOdc + totalOdp + totalRumah;
+
+            // Pembaruan Informasi Atas (Dashboard Hero)
+            document.getElementById('grand-total').innerText = formatRupiah(nilaiGrandTotal);
+            document.getElementById('table-grand-total').innerText = formatRupiah(nilaiGrandTotal);
+            document.getElementById('badge-node').innerText = (parseInt(qtyOdp) + 1) + ' Node';
+            document.getElementById('badge-rumah').innerText = qtyRumah + ' Unit';
+
+            // Pembaruan data Topologi Interaktif (Live Diagram)
+            document.getElementById('topo-odc-loc').innerText = document.getElementById('lokasi-odc').value;
+            document.getElementById('topo-kabel').innerText = qtyKabel + ' Mtr';
+            document.getElementById('topo-odp-qty').innerText = qtyOdp + ' Kotak ODP';
+            document.getElementById('topo-rumah-qty').innerText = qtyRumah + ' Rumah Target';
+
+            // Pembaruan Data Teks Wilayah/Lokasi ke Tabel Proyek
+            document.getElementById('table-lokasi-tiang').innerText = document.getElementById('lokasi-tiang').value;
+            document.getElementById('table-lokasi-odc').innerText = document.getElementById('lokasi-odc').value;
+            document.getElementById('table-lokasi-odp').innerText = document.getElementById('lokasi-odp').value;
+            document.getElementById('table-lokasi-rumah').innerText = document.getElementById('lokasi-rumah').value;
+
+            // Pembaruan Rincian Biaya Realtime pada Tabel Anggaran
+            document.getElementById('table-qty-tiang').innerText = qtyTiang + ' Btg';
+            document.getElementById('table-harga-tiang').innerText = formatRupiah(hargaTiang);
+            document.getElementById('table-total-tiang').innerText = formatRupiah(totalTiang);
+
+            document.getElementById('table-qty-kabel').innerText = qtyKabel + ' Mtr';
+            document.getElementById('table-harga-kabel').innerText = formatRupiah(hargaKabel);
+            document.getElementById('table-total-kabel').innerText = formatRupiah(totalKabel);
+
+            document.getElementById('table-harga-odc').innerText = formatRupiah(hargaOdc);
+            document.getElementById('table-total-odc').innerText = formatRupiah(totalOdc);
+
+            document.getElementById('table-qty-odp').innerText = qtyOdp + ' Unit';
+            document.getElementById('table-harga-odp').innerText = formatRupiah(hargaOdp);
+            document.getElementById('table-total-odp').innerText = formatRupiah(totalOdp);
+
+            document.getElementById('table-qty-rumah').innerText = qtyRumah + ' Unit';
+            document.getElementById('table-harga-rumah').innerText = formatRupiah(hargaRumah);
+            document.getElementById('table-total-rumah').innerText = formatRupiah(totalRumah);
+        }
+
+        // FUNGSI UTAMA: GENERATE DAN DOWNLOAD EXCEL
+        function eksporKeExcel() {
+            // Ambil elemen tabel HTML
+            const tabel = document.getElementById("tabel-rab");
+            
+            // Konversi tabel HTML menjadi lembar kerja (Worksheet) SheetJS
+            const wb = XLSX.utils.table_to_book(tabel, { sheet: "RAB FTTH Project" });
+            
+            // Mengatur nama file keluaran dengan format tanggal dinamis
+            const tanggal = new Date().toISOString().slice(0,10);
+            const namaFile = `RAB_FTTH_Project_${tanggal}.xlsx`;
+            
+            // Trigger download file Excel di browser pengguna
+            XLSX.writeFile(wb, namaFile);
+        }
+
+        // Menjalankan fungsi kalkulasi awal otomatis saat program dijalankan
+        window.onload = hitungTotal;
+    </script>
+
+</body></html>
